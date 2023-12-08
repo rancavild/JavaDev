@@ -2,6 +2,7 @@ package Code;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class LoopTwo {
 
@@ -14,19 +15,20 @@ public class LoopTwo {
     }
 
     public static void main(String[] args) {
-        List<Integer> result = new ArrayList<>();
-        int a = 0;
-        int b = 2;
-        int n = 10;
-
-        int s = a + pow(2,0) * b;
-        result.add(s);
-
-        for (int i=1; i < n - 1; i++) {
-            s += a + (int)pow(2,i) * b;
-            result.add(s);  
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for (int i=0; i < t; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            
+            int s = a;
+            for (int j = 0; j < n; j++) {
+                s += pow(2, j)*b;
+                System.out.print(s+" ");
+            }
+            System.out.println();
         }
-
-        System.out.println(result);
+        in.close();
     }
 }

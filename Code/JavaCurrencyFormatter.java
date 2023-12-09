@@ -20,7 +20,7 @@ public class JavaCurrencyFormatter {
 
         System.out.println("US: "    +us.format(payment));
         System.out.println("India: Rs." +india.format(payment));
-        System.out.println("China: ￥" +china.format(payment));
+        System.out.println("China: \uffe5" +china.format(payment));
         System.out.println("France: "+france.format(payment));
     }
 }
